@@ -10,9 +10,9 @@ class conexion extends PDO
 	public function __construct()
 	{
 		try{
-			parent::__construct('mysql_host=' . $this->hostbd. ';dbname='. $this->nombrebd . ';charset=utf8', $this->usuariobd, $this->passwordbd, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			parent::__construct('mysql:host=' . $this->hostbd . ';dbname=' . $this->nombrebd . ';charset=utf8', $this->usuariobd, $this->passwordbd, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		} catch(PDOException $e){
-			echo 'Error: '. $e->getMessage();
+			echo 'Error: aaaa '. $e->getMessage();
 			exit;
 		}
 	}
