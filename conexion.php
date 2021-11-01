@@ -3,9 +3,9 @@
 class conexion extends PDO
 {
 	private $hostbd = 'localhost';
-	private $nombrebd = 'WebService';
+	private $nombrebd = 'webservice';
 	private $usuariobd = 'root';
-	private $passwordbd = ' ';
+	private $passwordbd = '';
 
 	public function __construct()
 	{
