@@ -5,9 +5,6 @@ include 'conexion.php';
 $PDO = new conexion();
 
 
-
-
-
 ?>
 
 <!DOCTYPE html>
