@@ -1,20 +1,40 @@
 <?php
 
-$xml = json_encode(file_get_contents("http://localhost/WebService/service.php"), true);
-print_r($xml);
-echo "<br>";
-echo "<br>";
+include 'conexion.php';
 
-$data = json_decode(file_get_contents("http://localhost/WebService/service.php"), true);	
-print_r($data);
+$PDO = new conexion();
 
-echo "<br>";
-echo "<br>";
-for ($i=0; $i<count($data); $i++){
-	echo 'Nombre: ' . $data[$i]["nombre"]. "<br>";
-	echo 'Apellido Paterno: ' .  $data[$i]["p_apellido"] . "<br>";
-	echo 'Apellido Materno: ' . $data[$i]["s_apellido"] . "<br>";
-	echo "<br>";
-}
 
+
+
+	if (isset($_GET['buscar'])) 
+	{
+		if (!empty($_GET['id'])|| $_GET['id']!="Ingresa ID")
+			{
+			$sql = $PDO->prepare("SELECT * FROM t_web WHERE id=:id");
+			$sql->bindValue(':id', $_GET['id']);
+			$sql->execute();
+			$sql->setFetchMode(PDO::FETCH_ASSOC);
+			header("HTTP/1.1 200 hay datos");
+			$inf = json_encode($sql->fetchAll());
+			echo "$inf";
+			echo "<br><br>";
+			$infd = json_decode($inf, true);
+			print_r($infd);
+			echo "<br><br>";
+			for ($i=0; $i<count($infd); $i++){
+				echo 'nombre: ' . $infd[$i]["nombre"]. "<br>";
+				echo 'p_apellido: ' .  $infd[$i]["p_apellido"] . "<br>";
+				echo 's_apellido: ' . $infd[$i]["s_apellido"] . "<br>";
+				echo "<br>";
+			}
+			exit;		
+			}
+	}
 ?>
+	<form method="get">
+		<input type="text" placeholder="Ingresa ID" autofocus name="id">
+		<button type="submit" name="buscar">Buscar</button>		
+	</form>
+
+
