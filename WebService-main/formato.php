@@ -55,7 +55,7 @@ $PDO = new conexion();
 						echo '"nombre": ' . $infd[$i]["nombre"]. "<br>";
 						echo '"ap_paterno: " ' .  $infd[$i]["ap_paterno"] . "<br>";
 						echo '"ap_materno": ' . $infd[$i]["ap_materno"] . "<br>";
-						echo '"vehiculo": ' . $infd[$i]["veiculo"] . "<br>";
+						echo '"vehiculo": ' . $infd[$i]["vehiculo"] . "<br>";
 						echo "<br>";
 					}
 					?>
