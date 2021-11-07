@@ -15,7 +15,7 @@
 			<div class="formulario__grupo" id="grupo__usuario">
 				<label for="usuario" class="formulario__label">Paterno</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="txtPaterno" id="nombre" placeholder="john123">
+					<input type="text" class="formulario__input" name="txtPaterno" id="txtPaterno" placeholder="john123">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
@@ -25,7 +25,7 @@
 			<div class="formulario__grupo" id="grupo__usuario">
 				<label for="usuario" class="formulario__label">Materno</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="txtMaterno" id="nombre" placeholder="john123">
+					<input type="text" class="formulario__input" name="txtMaterno" id="txtMaterno" placeholder="john123">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
