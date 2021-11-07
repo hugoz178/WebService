@@ -1,8 +1,8 @@
 <?php 
 	session_start();
-	include_once 'model/conexion.php';
-	$usuario = $_POST['txtUsu'];
-	$contrasena = $_POST['txtPass'];
+	include_once 'WebService-main/model/conexion.php';
+	$usuario = $_POST['correo'];
+	$contrasena = $_POST['password'];
 	$sentencia = $bd->prepare('select * from clientes where 
 								correo = ? and psw = ?;');
 	$sentencia->execute([$usuario, $contrasena]);

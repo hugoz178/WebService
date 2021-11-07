@@ -3,7 +3,7 @@
 	if (!isset($_SESSION['nombre'])) {
 		header('Location: login.php');
 	}elseif(isset($_SESSION['nombre'])){
-		include 'model/conexion.php';
+		include 'WebService-main/model/conexion.php';
 		$sentencia = $bd->query("SELECT * FROM clientes;");
 		$clientes = $sentencia->fetchAll(PDO::FETCH_OBJ);
 		//print_r($clientes);

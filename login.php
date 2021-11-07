@@ -33,9 +33,16 @@
 
 			
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn">Enviar</button>
+				<input type="submit" name="enviar" class="formulario__btn">
+				
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
+		</form>
+
+		<form action="loginProceso.php" method="POST">
+			<input type="email" name="correo">
+			<input type="password" name="password">
+			<input type="submit" name="enviar">
 		</form>
 	</main>
 
