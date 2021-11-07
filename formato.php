@@ -40,7 +40,7 @@ $PDO = new conexion();
 			{
 				if (!empty($_POST['id'])|| $_POST['id']!="Ingresa ID")
 					{
-					$sql = $PDO->prepare("SELECT * FROM t_web WHERE id=:id");
+					$sql = $PDO->prepare("SELECT * FROM clientes WHERE id=:id");
 					$sql->bindValue(':id', $_POST['id']);
 					$sql->execute();
 					$sql->setFetchMode(PDO::FETCH_ASSOC);
@@ -53,8 +53,8 @@ $PDO = new conexion();
 					echo "<br><br>";
 					for ($i=0; $i<count($infd); $i++){
 						echo '"nombre": ' . $infd[$i]["nombre"]. "<br>";
-						echo '"p_apellido: " ' .  $infd[$i]["p_apellido"] . "<br>";
-						echo '"s_apellido": ' . $infd[$i]["s_apellido"] . "<br>";
+						echo '"p_apellido: " ' .  $infd[$i]["ap_paterno"] . "<br>";
+						echo '"s_apellido": ' . $infd[$i]["ap_materno"] . "<br>";
 						echo "<br>";
 					}
 					?>

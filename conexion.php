@@ -3,7 +3,7 @@
 class conexion extends PDO
 {
 	private $hostbd = 'localhost';
-	private $nombrebd = 'webservice';
+	private $nombrebd = 'haceru3';
 	private $usuariobd = 'root';
 	private $passwordbd = '';
 
