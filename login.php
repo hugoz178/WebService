@@ -9,10 +9,12 @@
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+
+
 	<main>
 		<form action="loginProceso.php" class="formulario" id="formulario" method="POST">
 			
-			<!-- Grupo: Correo Electronico -->
+			
 			<div class="formulario__grupo" id="grupo__correo">
 				<label for="correo" class="formulario__label">Correo Electrónico</label>
 				<div class="formulario__grupo-input">
@@ -21,7 +23,7 @@
 				</div>
 				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
 			</div>
-			<!-- Grupo: Contraseña -->
+			
 			<div class="formulario__grupo" id="grupo__password">
 				<label for="password" class="formulario__label">Contraseña</label>
 				<div class="formulario__grupo-input">
@@ -38,15 +40,22 @@
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
 		</form>
+		<br><br><br><br>	
 
-		<form action="loginProceso.php" method="POST">
-			<input type="email" name="correo">
+			<form method="POST" action="loginProceso.php">
+			<label>Usuario: </label>
+			<input type="text" name="correo">
+			<br>
+			<label>Password: </label>
 			<input type="password" name="password">
-			<input type="submit" name="enviar">
+			<br>
+			<input type="submit" value="Iniciar sesión">
 		</form>
 	</main>
 
-	<script src="js/formulario.js"></script>
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+		<script src="js/formulario.js"></script>
+		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
