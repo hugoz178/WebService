@@ -9,11 +9,11 @@
 	$nombre = $_POST['txtNombre'];
 	$correo = $_POST['txtCorreo'];
 	$psw = $_POST['txtPsw'];
-	$vehiculo = $_POST['txtVeiculo'];
+	
 
 
-	$sentencia = $bd->prepare("INSERT INTO clientes(ap_paterno,ap_materno,nombre,psw,vehiculo,correo) VALUES (?,?,?,?,?,?);");
-	$resultado = $sentencia->execute([$paterno,$materno,$nombre,$psw,$vehiculo,$correo]);
+	$sentencia = $bd->prepare("INSERT INTO clientes(ap_paterno,ap_materno,nombre,psw,correo) VALUES (?,?,?,?,?);");
+	$resultado = $sentencia->execute([$paterno,$materno,$nombre,$psw,$correo]);
 
 	if ($resultado === TRUE) {
 		//echo "Insertado correctamente";
