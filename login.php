@@ -40,6 +40,7 @@
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
 		</form>
+				<a href="registrar.php">¿No tienes cuenta? Registrate!!</a>
 		<br><br><br><br>	
 
 			<form method="POST" action="loginProceso.php">
@@ -51,6 +52,7 @@
 			<br>
 			<input type="submit" value="Iniciar sesión">
 		</form>
+
 	</main>
 
 
