@@ -18,10 +18,11 @@ $PDO = new conexion();
   <div class="col-md-2"></div>	
 
   <div class="col-md-8">
-	<br><br><br><br><br><br>
-<div class="card">
+	<br><br>
+<div class="card" style=" padding: 20px;">
 	<div class="card-body">
-  <h2>Nuestros Datos</h2>
+  <h2 style="font-weight: bold;">Nuestros Datos</h2>
+  <p>Web Service propio</p>
 
 
   <ul class="nav nav-tabs">
@@ -30,7 +31,7 @@ $PDO = new conexion();
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-      <h3>Busca un dato con el id</h3>
+      <h3 style="font-weight: bold;">Busca un dato con el id</h3>
     <form method="post">
 		<input type="text" placeholder="Ingresa ID" autofocus name="id">
 		<button type="submit" class="btn btn-primary" name="buscar">Buscar</button>		
@@ -40,7 +41,7 @@ $PDO = new conexion();
 			{
 				if (!empty($_POST['id'])|| $_POST['id']!="Ingresa ID")
 					{
-					$sql = $PDO->prepare("SELECT * FROM t_web WHERE id=:id");
+					$sql = $PDO->prepare("SELECT * FROM clientes WHERE id=:id");
 					$sql->bindValue(':id', $_POST['id']);
 					$sql->execute();
 					$sql->setFetchMode(PDO::FETCH_ASSOC);
@@ -53,12 +54,12 @@ $PDO = new conexion();
 					echo "<br><br>";
 					for ($i=0; $i<count($infd); $i++){
 						echo '"nombre": ' . $infd[$i]["nombre"]. "<br>";
-						echo '"p_apellido: " ' .  $infd[$i]["p_apellido"] . "<br>";
-						echo '"s_apellido": ' . $infd[$i]["s_apellido"] . "<br>";
+						echo '"p_apellido: " ' .  $infd[$i]["ap_paterno"] . "<br>";
+						echo '"s_apellido": ' . $infd[$i]["ap_materno"] . "<br>";
 						echo "<br>";
 					}
 					?>
-					<a type="submit" href="formato.php" class="btn" style="background-color: #B3E5FC">Atras</a>
+					<a type="submit" href="index.php" class="btn" style="background-color: #B3E5FC">Atras</a>
 					<?php
 					exit;		
 					}
@@ -75,7 +76,7 @@ $PDO = new conexion();
 
   <div class="tab-content">
     <div id="home2" class="tab-pane fade in active">
-      <h3>Todos los datos</h3>
+      <h3 style="font-weight: bold;">Todos los datos</h3>
         <?php
 			$xml = json_encode(file_get_contents("http://localhost/WebService/service.php"));
 			print_r($xml);
@@ -87,6 +88,26 @@ $PDO = new conexion();
 </div>
 </div>
 
+	<br><br><br>
+	<h2 style="font-weight: bold; color: white;">Encuentranos en:</h2>
+	<p style="color: white;">Web Service de terceros</p>
+	<div id="map" style="height: 300px; width: 100%;">	
+	</div>
+	<script type="text/javascript">
+		function iniciarMap(){
+			var coord = {lat:25.463841202169533 ,lng: -100.9618960436142}
+			var map = new google.maps.Map(document.getElementById('map'),{
+				zoom: 15,
+				center: coord
+			});
+			var marker = new google.maps.Marker({
+      		position: coord,
+      		map: map
+    		});
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>	
+	<br><br><br>
   </div>
 
   <div class="col-md-2"></div>
