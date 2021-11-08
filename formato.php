@@ -18,7 +18,7 @@ $PDO = new conexion();
   <div class="col-md-2"></div>	
 
   <div class="col-md-8">
-	<br><br><br><br><br><br>
+	<br><br>
 <div class="card">
 	<div class="card-body">
   <h2>Nuestros Datos</h2>
@@ -58,7 +58,7 @@ $PDO = new conexion();
 						echo "<br>";
 					}
 					?>
-					<a type="submit" href="formato.php" class="btn" style="background-color: #B3E5FC">Atras</a>
+					<a type="submit" href="index.php" class="btn" style="background-color: #B3E5FC">Atras</a>
 					<?php
 					exit;		
 					}
@@ -105,7 +105,7 @@ $PDO = new conexion();
 		}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>	
-
+	<br><br><br>
   </div>
 
   <div class="col-md-2"></div>
