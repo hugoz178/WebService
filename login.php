@@ -48,7 +48,7 @@
 		</center>
 		<br><br><br><br>	
 
-			<form method="POST" action="loginProceso.php">
+			<!--form method="POST" action="loginProceso.php">
 			<label>Usuario: </label>
 			<input type="text" name="correo">
 			<br>
@@ -56,7 +56,7 @@
 			<input type="password" name="password">
 			<br>
 			<input type="submit" value="Iniciar sesión">
-		</form>
+		</form-->
 			</div>
 		</div>
 	</main>
