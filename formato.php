@@ -14,6 +14,7 @@ $PDO = new conexion();
 </head>
 <body style="background-color: #F5F5F5">
 <div class="row">
+	<div>Hola</div>
 
   <div class="col-md-2"></div>	
 
